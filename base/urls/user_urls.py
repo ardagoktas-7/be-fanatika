@@ -1,6 +1,9 @@
 from django.urls import path
 from base.views import user_views as views
-
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularSwaggerView,
+)
 
 urlpatterns = [
     path('login/', views.MyTokenObtainPairView.as_view(),
